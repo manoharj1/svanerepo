@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Login Page is Displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[CRM Home  is Displayed, PASS]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15593" started-at="2022-04-26T05:36:10Z" finished-at="2022-04-26T05:36:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15593" started-at="2022-04-26T05:36:10Z" finished-at="2022-04-26T05:36:26Z">
+      <class name="com.Trunkil.Leads.ValidLoginTest">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.Trunkil.Leads.ValidLoginTest@3ffc5af1]" name="openBrowser" is-config="true" duration-ms="13385" started-at="2022-04-26T05:36:10Z" finished-at="2022-04-26T05:36:24Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Login Page is Displayed, PASS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginToApp()[pri:0, instance:com.Trunkil.Leads.ValidLoginTest@3ffc5af1]" name="loginToApp" duration-ms="2181" started-at="2022-04-26T05:36:24Z" finished-at="2022-04-26T05:36:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[CRM Home  is Displayed, PASS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApp -->
+      </class> <!-- com.Trunkil.Leads.ValidLoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
