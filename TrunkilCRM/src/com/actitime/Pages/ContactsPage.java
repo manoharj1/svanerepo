@@ -8,6 +8,7 @@ import com.Trunkil.genericLib.BaseTest;
 
 public class ContactsPage {
 
+	
 @FindBy(xpath="//td[contains(text(),'Contacts: ')]") private WebElement contactsText;
 @FindBy(xpath="//input[@value='New Contact']") private WebElement newContactsTab;
 

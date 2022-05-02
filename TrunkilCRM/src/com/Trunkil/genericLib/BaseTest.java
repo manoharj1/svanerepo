@@ -9,7 +9,8 @@ import org.testng.annotations.BeforeClass;
 public abstract class BaseTest implements IAutoConsts{
 // v r in git hub
 	public static WebDriver driver;
-	
+	//v are in eclipse trying to push into git hub
+	//pushing
 	@BeforeClass
 	public void openBrowser() throws Throwable
 	{
