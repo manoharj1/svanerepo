@@ -7,7 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public abstract class BaseTest implements IAutoConsts{
-
+// v r in git hub
 	public static WebDriver driver;
 	
 	@BeforeClass
