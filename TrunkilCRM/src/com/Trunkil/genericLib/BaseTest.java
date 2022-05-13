@@ -1,0 +1,53 @@
+package com.Trunkil.genericLib;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+public abstract class BaseTest implements IAutoConsts{
+// v r in git hub
+	public static WebDriver driver;
+	//v are in eclipse trying to push into git hub
+	//pushing
+	@BeforeClass
+	public void openBrowser() throws Throwable
+	{
+		FileLib flib=new FileLib();
+		String browserName = flib.readPropertyData(PROP_PATH, "browser");
+		if(browserName.equals("chrome"))
+		{
+			System.setProperty(CHROME_KEY, CHROME_VALUE);
+			driver=new ChromeDriver();
+		}
+		
+		else if(browserName.equals("firefox"))
+		{
+			System.setProperty(GECKO_KEY, GECKO_VALUE);
+			driver=new FirefoxDriver();
+		}
+		
+		else
+		{
+			System.out.println("Enter proper browser name");
+		}
+		
+		driver.manage().window().maximize();
+		String appUrl = flib.readPropertyData(PROP_PATH, "url");
+		driver.get(appUrl);
+		
+		WebDriverCommonLib wlib=new WebDriverCommonLib();
+		wlib.waitForPageTitle(flib.readPropertyData(PROP_PATH, "loginTitle"));
+		wlib.verify(flib.readPropertyData(PROP_PATH, "loginTitle"),
+				wlib.getPageTitle(),
+				"Login Page");
+	}
+	
+	@AfterClass(enabled = false)
+	public void closeBrowser()
+	{
+		driver.quit();
+	}
+	
+}
